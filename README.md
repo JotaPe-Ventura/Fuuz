@@ -8,4 +8,16 @@ Mas o que é Fuzzing?
 
 Fuzzing nada mais é do que uma técnica de teste automatizado / semi-automatizado em softwares na qual envolve o fornecimneto de dados aleatorios em busca de um comportamento anomalo.
 
+# INSTALAÇÂO
+```
+clone the repo
+$ git clone https://github.com/PixelDef/Fuuz.git
+
+# change the working directory to fuuz
+$ cd Fuuz
+
+# install the requirements
+$ python3 -m pip install -r requirements.txt
+```
+
 ![git](https://github.com/PixelDef/Fuuz/assets/86115368/b51a8125-6e42-47d4-a4cf-de940935d93b)
