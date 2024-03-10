@@ -4,8 +4,9 @@ from exceptions import InvalidUrlFormat, MissingFUZZTargetError
 
 
 class HostController:
-    def __init__(self, url) -> None:
+    def __init__(self, url, arg_data) -> None:
         self.url = url
+        self.request_data = arg_data
         pass
 
     def url_parser(self):
@@ -29,9 +30,9 @@ class HostController:
             self.url = self.url_parser()
             
             if 'FUZZ' in self.url:
-                parsed_url = self.url.replace('FUZZ', '')
+                self.url = self.url.replace('FUZZ', '')
 
-            response = requests.get(parsed_url)
+            response = requests.get(self.url)
             response_status_codee = response.status_code
 
             if response_status_codee not in status_codes_online:
@@ -49,7 +50,7 @@ class HostController:
 
 
     def locate_fuzz_target(self):
-        if 'FUZZ' not in self.url:
+        if 'FUZZ' not in self.url and self.request_data is None:
             raise MissingFUZZTargetError(f'\nUnable to find FUZZ in the url: {self.url}. Try: https://target.com/FUZZ')
         
         return self.url

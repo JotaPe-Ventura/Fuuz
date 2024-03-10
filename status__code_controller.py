@@ -7,4 +7,4 @@ class StatusCodeController:
         if not self.status_code is None:
             return self.status_code.split(',')
         
-        return [200, 301, 403, 404]
+        return [200, 301, 403, 404, 405]

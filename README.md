@@ -1,23 +1,26 @@
 # Fuuz
 
-[+] Aviso: Este é um software de teste de vulnerabilidade baseado no envio de requisições, não o use sem permissão prévia, pois esta é uma ação ilegal. Use somente em ambientes autorizados e que tenham controle total, não sou responsável pelo uso indevido do aplicativo. ⚠️
+[+] Warning: This is a vulnerability testing software based on sending requests, do not use it without prior permission, as this is an illegal action. Use it only in authorized environments that have full control, I am not responsible for the misuse of the application. ⚠️
 
-Fuuz é uma ferramenta para pentest e bug-bounty voltada para a realização de Fuzzing
+Fuuz is a tool for pentesting and bug-bounty focused on performing Fuzzing.
 
-Mas o que é Fuzzing?
+But what is Fuzzing?
 
-Fuzzing nada mais é do que uma técnica de teste automatizado / semi-automatizado em softwares na qual envolve o fornecimneto de dados aleatorios em busca de um comportamento anomalo.
+Fuzzing is nothing more than an automated/semi-automated testing technique in software which involves providing random data in search of anomalous behavior.
 
-# INSTALAÇÂO
+# INSTALLATION
 ```
-clone the repo
-$ git clone https://github.com/PixelDef/Fuuz.git
+# clone the repo
+$ git clone https://github.com/JotaPe-Ventura/Fuuz.git
 
 # change the working directory to fuuz
 $ cd Fuuz
 
 # install the requirements
 $ python3 -m pip install -r requirements.txt
+
 ```
 
-![git](https://github.com/PixelDef/Fuuz/assets/86115368/b51a8125-6e42-47d4-a4cf-de940935d93b)
+# PROJECT SUPPORT
+
+If you liked Fuuz, consider giving a star to the repository. If you find any issues or have suggestions for improvement, feel free to open an issue or send a pull request. Your contribution is very welcome! 🚀

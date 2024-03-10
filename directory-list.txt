@@ -3,6 +3,7 @@ images
 download
 2006
 artist.php
+testphp
 news
 crack
 serial

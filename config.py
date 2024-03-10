@@ -23,6 +23,7 @@ class Config:
         self.parser.add_argument('-cr', '--content_reader', required=False,
                                  help='Search for word in response')
         self.parser.add_argument('-cl', '--content_length', required=False)
+        self.parser.add_argument('-sf', '--size_filter', required=False)
 
     def parse_args(self):
         return self.parser.parse_args()
