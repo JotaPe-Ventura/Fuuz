@@ -124,7 +124,6 @@ class Fuzzer:
         except requests.exceptions.ConnectionError:
             pass
 
-
     
     def response_controller(self, response, payload, status_code):
         response_content = response.text
