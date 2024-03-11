@@ -132,9 +132,14 @@ class Fuzzer:
         response_size = len(response.content)
         response_time = response.elapsed.total_seconds()
         
-        if (self.content_reader is None and self.response_size_filter is None) and (response_status_code in status_code):
+        if (not self.content_reader is None and self.response_size_filter is None) and (response_status_code in status_code):
             print(f'\r{payload.ljust(30)}           [Status: {response_status_code}, Size: {response_size}, Duration: {response_time}]')
-            
+        
+        elif (not self.status_code is None):
+            if int(self.status_code) == response_status_code:
+                print(f'\r{payload.ljust(30)}           [Status: {response_status_code}, Size: {response_size}, Duration: {response_time}]')
+            pass
+
         elif (not self.response_size_filter is None and response_size != int(self.response_size_filter)) and (response_status_code in status_code):
             print(f'\r{payload.ljust(30)}           [Status: {response_status_code}, Size: {response_size}, Duration: {response_time}]')
 
